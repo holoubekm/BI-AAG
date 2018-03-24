@@ -1,0 +1,311 @@
+<!--?xml version="1.0" encoding="utf-8" ?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<html><head>
+  <title>holoumar@progtest.fit.cvut.cz - ProgTest</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="assignment_files/css.css" rel="stylesheet" type="text/css">
+  <script src="assignment_files/shared.js" language="JavaScript" type="text/javascript"></script>
+  
+ </head>
+ <body text="#000000" bgcolor="#828273">
+  
+
+
+
+
+
+ 
+ <br>
+   <center>
+   <div class="topLayout">
+    <div class="outBox">
+     <table class="header" width="100%" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+       <td class="header"><b>Minimalizace automatu I.</b></td>
+      </tr>
+     </tbody></table>
+    </div>
+   </div>
+  </center>
+ <form name="form1" method="post" action="?X=TaskU&amp;Cou=127&amp;Tgr=815&amp;Tsk=713" enctype="multipart/form-data">
+  <center>
+    <div class="topLayout">
+     <div class="outBox">
+      <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+       <colgroup><col width="200">
+       <col>
+       <col width="130">
+
+       </colgroup><tbody><tr>
+        <td class="ltCell" align="left"><b>Termín odevzdání:</b></td>
+        <td class="tCell" align="left"><b>30.11.2014 23:59:59</b></td>
+        <td class="rtCell" id="countdown" align="right">&nbsp;</td>
+       </tr>
+
+       <tr>
+        <td class="lCell" align="left"><b>Hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>0.0000</b></td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Max. hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>0.0000</b> (bez bonusů)</td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Odevzdaná řešení:</b></td>
+        <td class="rCell" colspan="2" align="left">1 /  20</td>
+       </tr>
+
+       <tr>
+        <td class="lbCell" align="left"><b>Nápovědy:</b></td>
+        <td class="rbCell" colspan="2" align="left">0 / 0</td>
+       </tr>
+
+       <tr>
+        <td class="lrtbCell" colspan="3" align="left"><h1>První úkol</h1>
+
+<p>Úkolem je determinizace a minimalizace konečného
+automatu.</p>
+
+<ol>
+ <li>Determinizujte předložený nedeterministický konečný automat (popis
+formátu jeho zadání je uveden níže).</li>
+
+ <li>Proveďte minimalizaci výsledného deterministického automatu.</li>
+</ol>
+
+<p>Minimalizovaný automat odevzdejte v podobě textového souboru ve formátu popsaném níže.</p>
+
+<p>Automat musí mít buď <b>úplnou přechodovou funkci</b> (tabulka přechodů má každou buňku vyplněnou), <b>nebo nebude obsahovat žádný zbytečný stav</b>
+ (tedy takový, ze kterého se již nelze dostat do žádného koncového 
+stavu). Toto je nutná podmínka pro kontrolu správnosti provedení 
+minimalizace. Stavy můžete pro zjednodušení zápisu přejmenovat.</p>
+
+<b>Textový formát popisu automatu:</b><br>
+
+<p>Jedná se o zápis tabulky přechodů automatu. Jednotlivé buňky jsou v
+řádku odděleny aspoň jednou mezerou. Vstupní symboly se zapisují jedním znakem.
+Výjimkou je \eps pro epsilon. Označení stavu může být delší a může
+obsahovat alfanumerické znaky.</p>
+
+<p>První řádek začíná identifikátorem DFA nebo NFA pro deterministický,
+resp. nedeterministický automat. Další buňky obsahují vstupní symboly – 
+záhlaví tabulky přechodů.
+
+Druhý a každý další rádek obsahují nejprve jmenovku stavu, které muže 
+předcházet značka počátečního (&gt;) a/nebo koncového (&lt;) stavu.
+Počáteční stav musí být právě jeden, koncových muže být více. První 
+sloupeček tedy
+tvoří výchozí stavy přechodů.
+Pak v řádku následují cílové stavy pro každý vstupní symbol v záhlaví.
+Pokud je cílových stavů více (NFA), jsou odděleny znakem svislítka
+(pipe, pajpa, |) ovšem bez mezer! Pokud není žádný cílový stav, je zde
+pomlčka (-).</p>
+
+<b>Příklady:</b><br>
+<hr>
+Nedeterministický:
+<pre>NFA  a  b  c   \eps
+&gt;&lt;A  B  -  C|A  -
+  B  A  A  A|B  A
+ &lt;C  C  C  C    -
+</pre>
+<hr>
+A deterministický:
+
+<pre>DFA  a  b  c
+&gt;&lt;A  B  D  C
+ &lt;B  B  A  C
+ &lt;C  C  C  C
+  D  D  D  D
+</pre>
+
+<p>Jelikož se po vás v zadání vyžaduje determinizace, Vaše řešení bude
+tedy začínat zkratkou DFA.</p>
+
+<p>V odevzdávaném souboru se raději omezte na symboly ze 7bit ASCII. 
+Správné chování pro vícebajtová kódování (UTF-8 apod.) není zaručeno.</p>
+
+<hr>
+<b>Zadaný NFA:</b><br>
+<br>
+<pre>NFA a b c d \eps
+ &gt;0 1|11 21 6|16|26 - - 
+  1 2 - - - 2 
+  2 - 3 - - - 
+  3 - - 4 - - 
+  4 5 - - - - 
+ &lt;5 - - - - 2 
+  6 7 - - - - 
+  7 - 8 - - - 
+  8 - - - 9 - 
+  9 - - - 10 - 
+&lt;10 - - - - - 
+ 11 12 - - - 12 
+ 12 13 - - - - 
+ 13 - 14 - - - 
+ 14 15 - - - - 
+&lt;15 - - - - 13 
+ 16 17 - - - - 
+ 17 - - 18 - - 
+ 18 - 19 - - - 
+ 19 20 - - - - 
+&lt;20 - - - - - 
+ 21 22 - - - 24 
+ 22 - - - 23 - 
+ 23 - - - 24 - 
+ 24 - - - 25 - 
+&lt;25 - - - - 24 
+ 26 27 - - - - 
+ 27 - 28 - - - 
+ 28 - - - 29 - 
+ 29 - - - 30 - 
+&lt;30 - - - - - 
+
+</pre>
+</td>
+       </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      </tbody></table>
+     </div>
+    </div>
+
+
+
+
+
+ <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>1</b></td>
+    
+    
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Stav odevzdání:</b></td>
+    <td class="tCell" align="left">Ohodnoceno</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Hodnocení:</b></td>
+    <td class="bCell" align="left">0.0000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Hodnotitel: automat</b><ul><li>Test 'test': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Celkové hodnocení: 100.00 %</li></ul></li><li>Celkové procentní hodnocení: 100.00 %</li><li>Celkem bodů: 1.00 * 0.00 = 0.00</li></ul></td>
+   </tr>   </tbody></table>
+  </div>
+ </div>
+  </center>
+ </form>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+
+var deadLine = new Date ( 1417388399 * 1000 );
+
+function CBpressed ( num )
+ {
+   var pre, cb;
+
+   cb = MM_findObj ( "cb_" + num );
+   pre = MM_findObj ( "pre_" + num );
+   if ( cb != null && pre != null )
+    {
+      pre . style . display = cb . checked ? "block" : "none";
+    }
+ }
+
+function unlockAdvice ( url )
+ {
+   if ( confirm ( 'Máte k dispozici pouze omezený počet nápověd. Navíc, použití nápovědy může snížit bodové hodnocení. Opravdu chcete zpřístupnit tuto nápovědu?' ) )
+    this . location = url;
+ }
+
+function setCountdown ( )
+ {
+   var d = new Date ();
+   var x = ( deadLine . getTime () - d . getTime () );
+   var tgt = document . getElementById ( "countdown" );
+
+   if ( x > 0 )
+    {
+      var s = Math . floor ( x / 1000 );
+      var ms = (x % 1000) + "";
+
+      while ( ms . length  < 3 ) ms = "0" + ms;
+
+      tgt . innerHTML = s + "." + ms + " sec";
+
+      window . setTimeout ( setCountdown, 117 );
+    }
+   else
+    {
+      tgt . innerHTML = '&nbsp;';
+    }
+ }
+
+function showRefSolution ( )
+ {
+   var t = document . getElementById ( "reftable" );
+   var x = document . getElementsByName ( "SHOW_REF" )[0];
+
+   if ( ! x ) return;
+   var r1 = t . rows[1], r2 = t . rows[2];
+
+   if ( x . checked )
+    {
+      r1 . style . display = "";
+      if ( r2 ) r2 . style . display = "";
+    }
+   else
+    {
+      r1 . style . display = "none";
+      if ( r2 ) r2 . style . display = "none";
+    }
+ }
+
+
+setCountdown ();
+showRefSolution ();
+
+// -->
+</script>
+
+
+
+
+
+ 
+
+
+</body></html>
+<!-- Template run time: 0.067938089370728 sec -->

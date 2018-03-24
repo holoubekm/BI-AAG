@@ -1,0 +1,285 @@
+<!--?xml version="1.0" encoding="utf-8" ?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<html><head>
+  <title>holoumar@progtest.fit.cvut.cz - ProgTest</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="assignment_files/css.css" rel="stylesheet" type="text/css">
+  <script src="assignment_files/shared.js" language="JavaScript" type="text/javascript"></script>
+  
+ </head>
+ <body text="#000000" bgcolor="#828273">
+  
+
+
+
+
+
+ <br>
+ <br>
+   <center>
+   <div class="topLayout">
+    <div class="outBox">
+     <table class="header" width="100%" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+       <td class="header"><b>Flex #06</b></td>
+      </tr>
+     </tbody></table>
+    </div>
+   </div>
+  </center>
+ <form name="form1" method="post" action="?X=TaskU&amp;Cou=127&amp;Tgr=816&amp;Tsk=391" enctype="multipart/form-data">
+  <center>
+    <div class="topLayout">
+     <div class="outBox">
+      <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+       <colgroup><col width="200">
+       <col>
+       <col width="130">
+
+       </colgroup><tbody><tr>
+        <td class="ltCell" align="left"><b>Termín odevzdání:</b></td>
+        <td class="tCell" align="left"><b>21.12.2014 23:59:59</b></td>
+        <td class="rtCell" id="countdown" align="right">&nbsp;</td>
+       </tr>
+
+       <tr>
+        <td class="lCell" align="left"><b>Hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>0.0000</b></td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Max. hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>0.0000</b> (bez bonusů)</td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Odevzdaná řešení:</b></td>
+        <td class="rCell" colspan="2" align="left">1 /  20</td>
+       </tr>
+
+       <tr>
+        <td class="lbCell" align="left"><b>Nápovědy:</b></td>
+        <td class="rbCell" colspan="2" align="left">0 / 0</td>
+       </tr>
+
+       <tr>
+        <td class="lrtbCell" colspan="3" align="left"><p>Sestavte pomocí programu Flex lexikální analyzátor, který bude vyhovovat požadavkům zadání.</p>
+
+<p>Flex je ke stažení na http://flex.sourceforge.net/ . Pokud používáte 
+OS Windows, budete potřebovat Cygwin (http://www.cygwin.com/). V takovém
+ případě nemusíte Flex stahovat z jeho oficiálních stránek, ale vyberte 
+si ho mezi balíčky, které se s Cygwinem budou instalovat. Společně s 
+Flexem budete potřebovat také programy make a gcc. Cygwin instalátor 
+obsahuje vyhledávání, tudíž byste měli Flex i make a gcc snadno najít.</p>
+
+<p>Vedle (kvalitních) manuálových stránek 
+http://flex.sourceforge.net/manual/ na internetu existuje celá řada 
+tutorialů pro práci s Flexem. Projděte si několik z nich a implementace 
+DÚ pro Vás nebude problém. Upozornění: v .lex souborech budete používat 
+kód kompilovatelný pomocí gcc, nikoli g++.</p>
+
+<p>Výstupem Vaší práce bude soubor &lt;username&gt;.lex. Tento soubor odevzdáte pomocí progtestu. </p>
+
+<p>Vaše řešení bude testováno pomocí deseti veřejných řetězců, které Vám
+ jsou k dispozici. Podmínkou zisku nenulového množství bodů je úspěch u 
+všech deseti veřejných testovacích řetězců.</p>
+
+<p>Po testu na veřejných řetězcích bude Vaše řešení otestováno pomocí 10
+ soukromých řetězců, ke kterým nebudete mít přístup a u kterých se Vám 
+jen vypíše, zda na nich Vaše řešení uspělo. Za každý úspěch na soukromém
+ řetězci dostanete deset procent bodů až do celkového množství 100%.</p>
+
+<p>Chcete-li kompilovat a testovat Váš .lex soubor u sebe doma, 
+kompilujte výstup z flexu ( flex student.solution.lex ) pomocí parametru
+ -lfl (tedy např. gcc -o flex_out.exe flex_out.c -lfl ). </p>
+
+<p>Při implementaci se vyhněte zapisování a čtení souborů, tvorbě nových
+ procesů a vláken. Pokud tyto požadavky nesplníte, může se snadno stát, 
+že Vaše řešení dostane 0 bodů. Vaše řešení získá 0 bodů, pokud nám také z
+ důvodu špatné implementace při testování havaruje.</p>
+
+<p>Zadání úlohy:</p>
+
+<p>Za mezerový znak považujte tabulátor, mezeru a znak nové řádky. Tyto 
+znaky nahrazujte, pokud jste zadáním požádáni odstranit mezerové znaky. 
+Za speciální případ mezerových znaků považujte i začátek vstupu a konec 
+vstupu, ty však nenahrazujte.</p>
+
+<p>Za slovo považujte každou maximálně dlouhou posloupnost znaků, ve které se nevyskytuje mezerový znak. Např. v textu </p><pre>"abcd aL ?"</pre> se vyskytují právě tři slova: {abcd,aL,?}. V tomto textu se nevyskytuje například slovo <pre>"abc"</pre>, ani slovo <pre>"L"</pre>.<p></p>
+
+<p>Za číslo považujte každou souvislou posloupnost číslic oddělenou od 
+zbytku textu mezerovými znaky (včetně začátku a konce řádky). Desetinná 
+čísla jsou povolena: jsou to čísla, která obsahují právě jednu 
+desetinnou čárku. Jako desetinnou čárku interpretujete znaky '.' nebo 
+','. Desetinná čísla musí přímo před desetinnou čárkou obsahovat alespoň
+ jednu číslici a za desetinnou čárkou také alespoň jednu číslici. Např. v
+ textu </p><pre>"a0 123 6, .5 5.5 128.0.0.0"</pre> jsou dvě čísla, z 
+toho jedno desetinné: 123 a 5.5. Pozor, tato definice nepovoluje záporná
+ čísla ani kladná čísla předznamenaná znaménkem +.<p></p>
+
+<p>Sestavte lexikální analyzátor, který čte ze standardního vstupu a na standardní výstup vypíše:</p>
+
+<p>6) kopii vstupu, kde všechna celočíselná sčítání jsou nahrazena výsledkem sčítání. Např. je-li na vstupu </p><pre>"abcd 3 + 5 * 6 xyz"</pre>, vypíše <pre>"abcd 8 * 6 xyz"</pre>.<p></p>
+
+<p>Předpokládejte čísla, jejichž součet se vejde do 4bytového intu. </p>
+
+<p>Sčítání je platné pokud začíná na číslo, pak následuje nenulový počet
+ mezerových znaků, následuje +, opět následuje nenulový počet mezerových
+ znaků a opět číslo. Poslední číslo může být vždy následováno dalším 
+znakem + a dalším číslem.</p>
+
+<p>Například pro vstup </p><pre>1 +     2  +    3  + 4</pre> je výstup <pre>10</pre>.<p></p>
+
+</td>
+       </tr>
+
+
+       <tr>
+        <td class="ltbCell" colspan="2" align="left"><b>Vzorová data:</b></td>
+        <td class="rtbCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskS&amp;Cou=127&amp;Tgr=816&amp;Tsk=391">Download</a></div></div></td>
+       </tr>
+
+
+
+
+
+
+
+
+
+
+
+      </tbody></table>
+     </div>
+    </div>
+
+
+
+
+
+ <br>
+  <div class="topLayout">
+  <div class="outBox">
+   <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>1</b></td>
+    
+    
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Stav odevzdání:</b></td>
+    <td class="tCell" align="left">Ohodnoceno</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Hodnocení:</b></td>
+    <td class="bCell" align="left">0.0000</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Hodnotitel: automat</b><ul><li>Program zkompilován</li><li>Test 'Test veřejnými řetězci': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 0.005 s (limit: 2.000 s)</li><li>Celková doba běhu: 0.048 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Test 'Test neveřejnými řetězci': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 10.00 %</li><li>Max doba běhu: 0.005 s (limit: 2.000 s)</li><li>Celková doba běhu: 0.045 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Celkové hodnocení: 100.00 % (= 1.00 * 1.00)</li></ul></li><li>Celkové procentní hodnocení: 100.00 %</li><li>Celkem bodů: 1.00 * 0.00 = 0.00</li></ul></td>
+   </tr>   </tbody></table>
+  </div>
+ </div><br>
+  <br>
+ 
+  </center>
+ </form>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+
+var deadLine = new Date ( 1419202799 * 1000 );
+
+function CBpressed ( num )
+ {
+   var pre, cb;
+
+   cb = MM_findObj ( "cb_" + num );
+   pre = MM_findObj ( "pre_" + num );
+   if ( cb != null && pre != null )
+    {
+      pre . style . display = cb . checked ? "block" : "none";
+    }
+ }
+
+function unlockAdvice ( url )
+ {
+   if ( confirm ( 'Máte k dispozici pouze omezený počet nápověd. Navíc, použití nápovědy může snížit bodové hodnocení. Opravdu chcete zpřístupnit tuto nápovědu?' ) )
+    this . location = url;
+ }
+
+function setCountdown ( )
+ {
+   var d = new Date ();
+   var x = ( deadLine . getTime () - d . getTime () );
+   var tgt = document . getElementById ( "countdown" );
+
+   if ( x > 0 )
+    {
+      var s = Math . floor ( x / 1000 );
+      var ms = (x % 1000) + "";
+
+      while ( ms . length  < 3 ) ms = "0" + ms;
+
+      tgt . innerHTML = s + "." + ms + " sec";
+
+      window . setTimeout ( setCountdown, 117 );
+    }
+   else
+    {
+      tgt . innerHTML = '&nbsp;';
+    }
+ }
+
+function showRefSolution ( )
+ {
+   var t = document . getElementById ( "reftable" );
+   var x = document . getElementsByName ( "SHOW_REF" )[0];
+
+   if ( ! x ) return;
+   var r1 = t . rows[1], r2 = t . rows[2];
+
+   if ( x . checked )
+    {
+      r1 . style . display = "";
+      if ( r2 ) r2 . style . display = "";
+    }
+   else
+    {
+      r1 . style . display = "none";
+      if ( r2 ) r2 . style . display = "none";
+    }
+ }
+
+
+setCountdown ();
+showRefSolution ();
+
+// -->
+</script>
+
+
+
+
+
+ 
+
+
+</body></html>
+<!-- Template run time: 0.075263977050781 sec -->

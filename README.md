@@ -1,5 +1,10 @@
 # BI-AAG Course
 
+### Progtest
+Folder contains solutions and source codes for assignments we were assigned to during the winter semester.
+
+These folders contain `assignment.html` filed with instructions and description as well.
+
 ### Postfix calculator
 This folder contains custom postfix calculator implementation
 It was used for lecturing purposes to let students understand how basic lexer, parser and stack automaton works.
