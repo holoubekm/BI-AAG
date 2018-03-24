@@ -1,4 +1,5 @@
 # BI-AAG Course
+## CTU / ČVUT FIT
 
 ### Postfix calculator
 This folder contains custom postfix calculator implementation
