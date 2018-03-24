@@ -1,5 +1,6 @@
 # BI-AAG Course
-## CTU / ČVUT FIT
+## Automaty a gramatiky
+### CTU / ČVUT FIT
 
 ### Progtest
 Folder contains solutions and source codes for assignments we were assigned to during the winter semester.
