@@ -1,0 +1,5 @@
+		1	2	3	eps
+<>	A	-	B	A,B	C
+>	C	C	C	-	DE
+<	B	A,C	-	A	-
+<	DE	A,C	-	A	-

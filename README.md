@@ -41,6 +41,7 @@ Result: [3]
 ```
 
 #### How to build
+##### Linux
 ```bash
 cd calculator
 mkdir debug && cd debug
@@ -49,6 +50,8 @@ make
 ```
 
 ---
+##### Linux
+Open the solution placed in `lexer` folder in Visual Studio and build it.
 
 ### Script converting NFA to DFA
 Script implements powerset algorithm converting nondeterministic finite-state automata to an appropriate deterministic variant.
