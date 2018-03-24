@@ -50,8 +50,10 @@ make
 ```
 
 ---
-##### Linux
+##### Windows
 Open the solution placed in `lexer` folder in Visual Studio and build it.
+
+I've originally used VS 2015, but any version with C++ toolchain should work just fine.
 
 ### Script converting NFA to DFA
 Script implements powerset algorithm converting nondeterministic finite-state automata to an appropriate deterministic variant.
